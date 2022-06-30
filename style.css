@@ -7,43 +7,17 @@ body {
   width: 100vw;
   height: auto;
   align-items: center;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   display: grid;
-  /* justify-content: center; */
-  /* padding: 0 100px; */
   background-color: rgb(22, 22, 22);
 
-
   grid-template-areas:
-    /* "nav nav nav nav nav"
-    "aside item-5 item-6 item-7 item-7"
-    "aside item-8 item-9 item-10 item-11"
-    "aside item-8 item-9 item-10 item-11"
-    "aside item-12 item-13 item-14 item-15"
-    "aside item-12 item-13 item-14 item-15"
-    "aside item-16 item-17 item-18 item-19"
-    "aside item-16 item-17 item-18 item-19"
-    
-    "footer footer footer footer footer";   */
-  "nav"
-  "main"
-  "footer";
-    
+    "nav"
+    "main"
+    "footer";
   /* gap: 15px; */
-
   text-align: center;
 }
-
-
-/* 
-.container div {
-  display: flex;
-  justify-content: center;
-
-  align-items: center;
-  border-radius: 5px;
-} */
-/* border: 1px solid; */
 
 .nav {
   grid-area: nav;
@@ -52,17 +26,13 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 40px;
-
-   
-
 }
 
-.logo{
-  width:150px
+.logo {
+  width: 150px;
 }
 
-.search input{
-  
+.search input {
   padding: 6px 10px;
   border: 2px solid #000000;
   border-radius: 3px;
@@ -70,19 +40,30 @@ body {
 }
 
 .search input[type="submit"] {
-  
   width: 75px;
   height: 32px;
-  
+
   background-color: rgb(0, 86, 0);
   border: 1px solid rgb(255, 255, 255);
   border-radius: 20px;
   color: white;
   cursor: pointer;
   transition: 0.5s;
-
 }
 
+
+
+.search input[type="submit"]:hover {
+  width: 75px;
+  height: 32px;
+
+  background-color: rgb(0, 54, 0);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
 
 .btn-1 {
   width: 100px;
@@ -117,114 +98,76 @@ body {
   border: 2px solid rgb(255, 255, 255);
 }
 
-
 .main {
   width: 100%;
   /* height: auto; */
   height: 100%;
   grid-area: main;
-  
+
   display: grid;
   grid-template-areas:
-/* "lista-de-reproduccion" 
-"section"
-"article" */
-"lista-de-reproduccion section section section section"
-"lista-de-reproduccion article article article article"
-"lista-de-reproduccion article article article article"
-"lista-de-reproduccion article article article article"
-"lista-de-reproduccion article article article article"
-"lista-de-reproduccion article article article article"
-"lista-de-reproduccion article article article article"
-    ;
+    "lista-de-reproduccion section section section section"
+    "lista-de-reproduccion article article article article"
+    "lista-de-reproduccion article article article article"
+    "lista-de-reproduccion article article article article"
+    "lista-de-reproduccion article article article article"
+    "lista-de-reproduccion article article article article"
+    "lista-de-reproduccion article article article article";
   gap: 10px;
 }
 
-
-
-.section{
+.section {
   width: 100%;
   /* height: auto; */
   height: 100%;
   grid-area: section;
   display: grid;
-  grid-template-areas:
- "publicidad-1 publicidad-2 etiquetas etiquetas";
+  grid-template-areas: "publicidad-1 publicidad-2 etiquetas etiquetas";
   margin-top: 20px;
 }
 
-.article{
-
+.article {
   width: 100%;
   /* height: auto; */
   height: 100%;
   grid-area: article;
-  
+
   display: grid;
   grid-template-areas:
- "video-1 video-2 video-3 video-4"
- "video-1 video-2 video-3 video-4"
- "video-5 video-6 video-7 video-8"
- "video-5 video-6 video-7 video-8"
- "video-9 video-10 video-11 video-12"
- "video-9 video-10 video-11 video-12" ; 
-
-
+    "video-1 video-2 video-3 video-4"
+    "video-1 video-2 video-3 video-4"
+    "video-5 video-6 video-7 video-8"
+    "video-5 video-6 video-7 video-8"
+    "video-9 video-10 video-11 video-12"
+    "video-9 video-10 video-11 video-12";
 }
-
-
-/* 
-.main {
-  width: 100%;
-
-
-  grid-area: main;
-
-  display: grid;
-  grid-template-areas:
-    "lista-de-reproduccion publicidad-1 publicidad-2 etiquetas etiquetas"
-    "lista-de-reproduccion video-1 video-2 video-3 video-4"
-    "lista-de-reproduccion video-1 video-2 video-3 video-4"
-    "lista-de-reproduccion video-5 video-6 video-7 video-8"
-    "lista-de-reproduccion video-5 video-6 video-7 video-8"
-    "lista-de-reproduccion video-9 video-10 video-11 video-12"
-    "lista-de-reproduccion video-9 video-10 video-11 video-12"   
-    
-    
-    ;
-  gap: 10px;
-} */
-
-
-
 
 .lista-de-reproduccion {
   grid-area: lista-de-reproduccion;
   /* background-color: rgb(0, 0, 0); */
   text-align: left;
-  align-items: center; 
+  align-items: center;
   padding: 20px 10px 10px 10px;
   color: rgb(255, 255, 255);
   display: grid;
   width: 300px;
   background-color: rgb(39, 39, 39);
-  overflow-y: scroll  ;
-  scrollbar-width: thin;         
+  overflow-y: scroll;
+  scrollbar-width: thin;
   scrollbar-color: rgb(113, 0, 0) grey;
   height: 680px;
-
-}
-.lista-de-reproduccion h3{
-  color:rgba(255, 0, 0, 0.676)
-
 }
 
-.lista-de-reproduccion p{
+.lista-de-reproduccion h3 {
+  color: rgba(255, 0, 0, 0.676);
+}
+
+.lista-de-reproduccion p {
   padding: 10px 20px 10px 0px;
 }
 
 .lista-de-reproduccion > * {
-  display:flex;
+  display: flex;
 }
 
 .lista-de-reproduccion > *:hover:not(h3) {
@@ -232,24 +175,15 @@ body {
   color: black;
   cursor: pointer;
   transition: 0.3s;
-
 }
 
 span {
   margin: auto;
-
 }
 
-/* .asideimg {
-  width:150px
-}
-
- */
-
-
-
-.publicidad-1 {
-  grid-area: publicidad-1;
+.publicidad-1,
+.publicidad-2 {
+  grid-area: publicidad-1, publicidad-2;
   background-color: rgba(0, 208, 255, 0.826);
   width: 333px;
   height: 108px;
@@ -257,64 +191,44 @@ span {
   /* border: 10px solid red; */
 }
 
- .publicidad-1 img {
-  object-fit:cover;
-  width: 100%;
-  height: 100%;
-} 
-
-
-
-
-.publicidad-2 {
+/* .publicidad-2 {
   grid-area: publicidad-2;
   background-color: rgba(0, 208, 255, 0.536);
   width: 333px;
   height: 108px;
-  /* width: auto;
-  height: 150px; */
-  /* border: 10px solid red; */
+} */
+
+.publicidad-1 img,
+.publicidad-2 img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
-.publicidad-2 img {
- object-fit:cover;
- width: 100%;
- height: 100%;
-}
-.publicidad-1:hover, .publicidad-2 :hover {
+.publicidad-1:hover,
+.publicidad-2 :hover {
   transform: 0.9;
   box-sizing: border-box;
-  border: 4px solid  rgba(255, 0, 0, 0.676);
-
+  border: 4px solid rgba(255, 0, 0, 0.676);
 }
-
-
-
-
-
-
-
 
 .etiquetas {
   grid-area: etiquetas;
-  background-color: transparent;  
+  background-color: transparent;
   /* height: 150px; */
   width: auto;
   height: 108px;
-  
 }
 
-.etiquetas h1{
+.etiquetas h1 {
   text-align: center;
   font-size: 18px;
   padding: 10px;
-  color: blanchedalmond
-  
+  color: blanchedalmond;
 }
 
 .etiquetas p {
   margin: 3px;
-
   background-color: transparent;
   color: rgb(255, 255, 255);
   border-radius: 20px;
@@ -323,10 +237,9 @@ span {
   object-fit: contain;
   text-align: center;
   padding: 7px;
-
 }
 
-.etiquetas p:hover{
+.etiquetas p:hover {
   background-color: rgb(113, 0, 0);
   cursor: pointer;
   transition: 0.2s;
@@ -340,106 +253,77 @@ span {
 
 .article iframe:hover {
   transform: scale(1.1);
-  
 }
 
 .article div h4 {
   color: white;
   font-size: 14px;
-} 
+}
 
-
-
-
-
-
-.video-1{
+.video-1 {
   grid-area: video-1;
   background-color: rgb(0, 255, 153);
-
 }
 
-
-.video-2{
+.video-2 {
   grid-area: video-2;
   background-color: rgb(0, 255, 153);
-
-  
 }
 
-.video-3{
+.video-3 {
   grid-area: video-3;
   background-color: rgb(0, 255, 153);
-
 }
 
-.video-4{
+.video-4 {
   grid-area: video-4;
   background-color: rgb(0, 255, 153);
-
-
 }
 
-.video-5{
+.video-5 {
   grid-area: video-5;
   background-color: rgb(0, 255, 153);
-
-
 }
-.video-6{
+
+.video-6 {
   grid-area: video-6;
   background-color: rgb(0, 255, 153);
-
-
 }
 
-.video-7{
+.video-7 {
   grid-area: video-7;
   background-color: rgb(0, 255, 153);
-
 }
 
-.video-8{
+.video-8 {
   grid-area: video-8;
   background-color: rgb(0, 255, 153);
-  /* width: 333px;
-  height: 216px; */
 }
 
-.video-9{
+.video-9 {
   grid-area: video-9;
   background-color: rgb(0, 255, 153);
-
 }
 
-
-.video-10{
+.video-10 {
   grid-area: video-10;
   background-color: rgb(0, 255, 153);
-
 }
 
-
-.video-11{
+.video-11 {
   grid-area: video-11;
   background-color: rgb(0, 255, 153);
-
 }
 
-
-.video-12{
+.video-12 {
   grid-area: video-12;
   background-color: rgb(0, 255, 153);
-
 }
-
-
 
 .footer {
   grid-area: footer;
   /* background-color: transparent; */
   background-color: rgb(39, 39, 39);
-
 }
 
 .footer > * {
