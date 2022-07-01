@@ -1,0 +1,345 @@
+:root {
+  --background_body: rgb(22, 22, 22);
+  --background_nav_y_aside: rgb(39, 39, 39);
+  --scrollbar: rgb(113, 0, 0);
+  --titulos_playlist: rgba(255, 0, 0, 0.676);
+  --etiquetas-hover: rgb(62, 62, 62);
+}
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  align-items: center;
+  font-family: "Noto Sans", sans-serif;
+  display: grid;
+  background-color: var(--background_body);
+  grid-template-areas:
+    "nav"
+    "main"
+    "footer";
+  /* gap: 15px; */
+  text-align: center;
+  overflow-x: hidden;
+
+}
+
+.nav {
+  grid-area: nav;
+  background-color: var(--background_nav_y_aside);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.search input {
+  height: 39px;
+  border: 1px solid rgba(254, 254, 254, 0.356);
+  background-color: var(--background_body);
+  color: #FFFFFF;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.search-btn {
+  width: 60px;
+  height: 43px;
+  border-radius: 10px;
+  border: 1px solid rgba(254, 254, 254, 0.356);
+  color: white;
+  background-color: var(--background_body);
+}
+
+
+.search-btn:hover {
+  background-color: var(--etiquetas-hover);
+
+}
+
+.btn-1 {
+  width: 100px;
+  height: 40px;
+  background-color: transparent;
+  border: 0px solid white;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-1:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn-2 {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(34, 0, 255);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-2:hover {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.main {
+  width: 100%;
+  /* height: auto; */
+  height: 100%;
+  grid-area: main;
+
+  display: grid;
+  grid-template-areas:
+    "lista-de-reproduccion section section section section"
+    "lista-de-reproduccion article article article article"
+    "lista-de-reproduccion article article article article"
+    "lista-de-reproduccion article article article article"
+    "lista-de-reproduccion article article article article"
+    "lista-de-reproduccion article article article article"
+    "lista-de-reproduccion article article article article";
+  gap: 10px;
+}
+
+.section {
+  width: 100%;
+  /* height: auto; */
+  height: 100%;
+  grid-area: section;
+  display: grid;
+  grid-template-areas: "publicidad-1 publicidad-2 publicidad-3 publicidad-3";
+  margin-top: 20px;
+}
+
+.article {
+  width: 100%;
+  /* height: auto; */
+  height: 100%;
+  grid-area: article;
+
+  display: grid;
+  grid-template-areas:
+    "video-1 video-2 video-3 video-4"
+    "video-1 video-2 video-3 video-4"
+    "video-5 video-6 video-7 video-8"
+    "video-5 video-6 video-7 video-8"
+    "video-9 video-10 video-11 video-12"
+    "video-9 video-10 video-11 video-12";
+}
+
+.lista-de-reproduccion {
+  grid-area: lista-de-reproduccion;
+  /* background-color: rgb(0, 0, 0); */
+  text-align: left;
+  align-items: center;
+  padding: 10px 0px 10px 0px;
+  color: rgb(255, 255, 255);
+  display: grid;
+  width: 270px;
+  background-color: rgb(39, 39, 39);
+  /* overflow-y: scroll;
+  scrollbar-width: thin; */
+  scrollbar-color: var(--scrollbar) grey;
+  /* height: 1000px; */
+}
+
+.lista-de-reproduccion h3 {
+  color: var(--titulos_playlist);
+  margin-left: 15px;
+}
+
+.lista-de-reproduccion div p {
+  padding: 10px 20px 10px 0px;
+}
+
+.lista-de-reproduccion>* {
+  display: flex;
+  /* margin: 0 auto; */
+}
+
+.lista-de-reproduccion>*:hover:not(h3, hr, .footer-ayuda) {
+  background-color: rgb(138, 138, 138);
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login a {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+}
+
+span {
+  margin: 7px;
+  padding-left: 10px;
+}
+
+.footer-ayuda {
+  display: table;
+  padding-left: 20px;
+}
+
+.footer-ayuda p {
+  font-size: 13px;
+  padding: 50px 20px 10px 0px;
+  color: rgba(255, 255, 255, 0.761);
+}
+
+.publicidad-1,
+.publicidad-2 {
+  grid-area: publicidad-1, publicidad-2;
+  background-color: rgba(0, 208, 255, 0.826);
+  width: 333px;
+  height: 108px;
+  display: flex;
+  margin-bottom: 20px;
+  /* border: 10px solid red; */
+}
+
+.publicidad-3 {
+  grid-area: publicidad-3 publicidad-3;
+  background-color: rgba(0, 208, 255, 0.826);
+  width: 750px;
+  height: 108px;
+  display: flex;
+  margin-bottom: 20px;
+  /* border: 10px solid red; */
+}
+
+.section {
+  justify-content: space-between;
+}
+
+.publicidad-1 img,
+.publicidad-2 img,
+.publicidad-3 img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.publicidad-1:hover,
+.publicidad-2 :hover,
+.publicidad-3 :hover {
+  transform: 0.9;
+  box-sizing: border-box;
+  border: 4px solid var(--titulos_playlist);
+}
+
+.article>*:not(div h4) {
+  width: 333px;
+  height: 210px;
+  background-color: transparent;
+
+}
+
+.article div {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+
+}
+
+.article div:hover {
+  transform: scale(1.1);
+  background-color: var(--background_nav_y_aside);
+
+}
+
+.article div h4 {
+  color: white;
+  font-size: 14px;
+}
+
+.video-1 {
+  grid-area: video-1;
+  background-color: rgb(0, 255, 153);
+}
+
+.video-2 {
+  grid-area: video-2;
+  background-color: rgb(0, 255, 153);
+}
+
+.video-3 {
+  grid-area: video-3;
+  background-color: rgb(0, 255, 153);
+}
+
+.video-4 {
+  grid-area: video-4;
+  background-color: rgb(0, 255, 153);
+}
+
+.video-5 {
+  grid-area: video-5;
+  background-color: rgb(0, 255, 153);
+}
+
+.video-6 {
+  grid-area: video-6;
+  background-color: rgb(0, 255, 153);
+}
+
+.video-7 {
+  grid-area: video-7;
+  background-color: rgb(0, 255, 153);
+}
+
+.video-8 {
+  grid-area: video-8;
+  background-color: rgb(0, 255, 153);
+}
+
+.video-9 {
+  grid-area: video-9;
+  background-color: rgb(0, 255, 153);
+}
+
+.video-10 {
+  grid-area: video-10;
+  background-color: rgb(0, 255, 153);
+}
+
+.video-11 {
+  grid-area: video-11;
+  background-color: rgb(0, 255, 153);
+}
+
+.video-12 {
+  grid-area: video-12;
+  background-color: rgb(0, 255, 153);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(39, 39, 39);
+}
+
+.footer>* {
+  color: white;
+}
